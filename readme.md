@@ -1,6 +1,6 @@
 # brainfreeze
 
-a tiny brainf\*ck interpreter written in golang
+a tiny brainfuck interpreter written in golang
 
 ## usage
 
@@ -27,17 +27,5 @@ create a new file ending with .bf (test.bf)
 here is the output for the above code
 
 ```
-H
-e
-l
-l
-o
-,
-
-W
-o
-r
-l
-d
-!
+Hello, World!
 ```

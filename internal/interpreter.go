@@ -39,7 +39,7 @@ func (p *Interpreter) Run() {
 		case '-':
 			p.Tape[p.Ptr]--
 		case '.':
-			fmt.Println(string(p.Tape[p.Ptr]))
+			fmt.Print(string(p.Tape[p.Ptr]))
 		case ',':
 			var input string
 			if _, err := fmt.Scan(&input); err != nil {
