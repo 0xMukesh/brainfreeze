@@ -21,7 +21,7 @@ create a new file ending with .bf (test.bf)
 ```
 
 ```
-./brainfreeze -file test.brt
+./brainfreeze -file test.bf
 ```
 
 here is the output for the above code
