@@ -6,7 +6,7 @@ import (
 )
 
 type Interpreter struct {
-	Tape  []byte
+	Tape  [30000]uint8
 	Ptr   int
 	Input []byte
 }
@@ -16,7 +16,7 @@ func InterpreterError(msg string, idx int) string {
 }
 
 func NewInterpreter(input []byte) *Interpreter {
-	tape := make([]byte, 30_000)
+	tape := [30000]uint8{}
 
 	return &Interpreter{
 		Tape:  tape,
@@ -51,7 +51,7 @@ func (p *Interpreter) Run() {
 				fmt.Println(InterpreterError(fmt.Sprintf("recieved %s. expected single character input", input), i))
 				os.Exit(1)
 			}
-			p.Tape[p.Ptr] = byte(int(runes[0]))
+			p.Tape[p.Ptr] = byte(runes[0])
 		case '[':
 			if p.Tape[p.Ptr] == 0 {
 				bracketCounter++
